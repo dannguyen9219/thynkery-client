@@ -7,28 +7,27 @@ export default function Task() {
     const [tasks, setTasks] = useState({});
 
     useEffect(() => {
-        // async () => {
-        //     try {
-        //         const response = await axios.get(`http://localhost:3000/tasks/table`)
-        //         setTasks(response.data)
-        //     }   catch (err) {
-        //         console.log(err)
-        //     }
-        // }
-        getTask()
+        (async () => {
+            try {
+                const response = await axios.get(`http://localhost:3000/tasks/table`)
+                setTasks(response.data)
+            }   catch (err) {
+                console.log(err)
+            }
+        })()
 
     }, []);
 
-    const getTask = async () => {
-        try {
-            const response = await axios.get(`http://localhost:3000/tasks/table`)
-            setTasks(response.data)
-        }   catch (err) {
-            console.log(err)
-        }
-    };
-    console.log(tasks)
-    // console.log(tasks["HIGH"])
+    // const getTask = async () => {
+    //     try {
+    //         const response = await axios.get(`http://localhost:3000/tasks/table`)
+    //         setTasks(response.data)
+    //     }   catch (err) {
+    //         console.log(err)
+    //     }
+    // };
+    // console.log(tasks) // Function created with Teo when code did not map over Priority... delete later
+    
     return (
         <>
             <div className="App">
