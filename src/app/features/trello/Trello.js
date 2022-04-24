@@ -22,7 +22,7 @@ export default function Trello() {
 
     const handleClick = async (statusChange, id) => {
         try {
-            const response = await axios.put(`http://localhost:3000/tasks/trello/${id}`, {
+            const response = await axios.put(`http://localhost:3000/tasks/${id}`, {
                 status: statusChange
             })
             if (response.status === 200) {
@@ -32,7 +32,8 @@ export default function Trello() {
             console.log(err)
         }
     };
-    console.log(tasks)
+    
+
     
     return (
         <>
