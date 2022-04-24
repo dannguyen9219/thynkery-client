@@ -12,7 +12,7 @@ export default function Trello() {
     useEffect(() => {
         (async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/tasks`)
+                const response = await axios.get(`http://localhost:3000/tasks/trello`)
                 setTasks(response.data)
             }   catch (err) {
                 console.log(err)
@@ -22,7 +22,7 @@ export default function Trello() {
 
     const handleClick = async (statusChange, id) => {
         try {
-            const response = await axios.put(`http://localhost:3000/tasks/${id}`, {
+            const response = await axios.put(`http://localhost:3000/tasks/trello/${id}`, {
                 status: statusChange
             })
             if (response.status === 200) {
@@ -44,8 +44,8 @@ export default function Trello() {
                     <h2>TO-DO'S</h2>
                     <div className="list">
                         {
-                            tasks["to do"] ?
-                            tasks["to do"].map((item, idx) => {
+                            tasks["TO DO"] ?
+                            tasks["TO DO"].map((item, idx) => {
                                 return (
                                     <div className="task" key={idx}>
                                         <Link to={`/${item._id}`}>{item.summary}</Link>
@@ -106,8 +106,8 @@ export default function Trello() {
                     <h2>DONE</h2>
                     <div className="list">
                         {
-                            tasks ?
-                            tasks.map((status, idx) => {
+                            tasks["DONE"] ?
+                            tasks["DONE"].map((status, idx) => {
                                 console.log(status)
                                 return (
                                     <div className="task" key={idx}>
