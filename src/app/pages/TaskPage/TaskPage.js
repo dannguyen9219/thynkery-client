@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
-import styles from "./NewTaskPage.module.css";
+import styles from "./TaskPage.module.css";
 import { Link, useNavigate } from 'react-router-dom';
 import Header from "../../components/Header/Header";
-import NewTask from "../../components/NewTask/NewTask";
+import Task from "../../features/task/Task";
 
-export default function NewTaskPage() {
+export default function TaskPage() {
     return (
         <div>
             <Header />
-            <NewTask />
+            <Task />
         </div>
-    )
+    );
 };

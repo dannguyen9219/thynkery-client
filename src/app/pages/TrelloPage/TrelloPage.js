@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
-import styles from "./NewTaskPage.module.css";
+import styles from "./TrelloPage.module.css";
 import { Link, useNavigate } from 'react-router-dom';
 import Header from "../../components/Header/Header";
-import NewTask from "../../components/NewTask/NewTask";
+import Trello from "../../features/trello/Trello";
 
-export default function NewTaskPage() {
+export default function TrelloPage() {
     return (
         <div>
             <Header />
-            <NewTask />
+            <Trello />
         </div>
-    )
+    );
 };
