@@ -1,4 +1,4 @@
-import "./Trello.css";
+import styles from "./Trello.css";
 import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -34,7 +34,7 @@ export default function Trello() {
     };
     
     return (
-        <>
+        <main className={styles.Trello}>
             <div>
                 <h1>This is the Trello Page</h1>
             </div>
@@ -47,7 +47,7 @@ export default function Trello() {
                             tasks["TO DO"].map((item, idx) => {
                                 return (
                                     <div className="task" key={idx}>
-                                        <Link to={`/${item._id}`}>{item.summary}</Link>
+                                        <Link to={`/task/${item._id}`}>{item.summary}</Link>
                                         <div>
                                             <button onClick={() => {handleClick("IN PROGRESS", item._id)}} className="button">IN PROGRESS</button>
                                         </div>
@@ -67,7 +67,7 @@ export default function Trello() {
                             tasks["IN PROGRESS"].map((item, idx) => {
                                 return (
                                     <div className="task" key={idx}>
-                                        <Link to={`/${item._id}`}>{item.summary}</Link>
+                                        <Link to={`/task/${item._id}`}>{item.summary}</Link>
                                         <div>
                                             <button onClick={() => {handleClick("TO DO", item._id)}} className="button">TO DO</button>
                                             <button onClick={() => {handleClick("IN REVIEW", item._id)}} className="button">IN REVIEW</button>
@@ -88,7 +88,7 @@ export default function Trello() {
                             tasks["IN REVIEW"].map((item, idx) => {
                                 return (
                                     <div className="task" key={idx}>
-                                        <Link to={`/${item._id}`}>{item.summary}</Link>
+                                        <Link to={`/task/${item._id}`}>{item.summary}</Link>
                                         <div>
                                             <button onClick={() => {handleClick("IN PROGRESS", item._id)}} className="button">IN PROGRESS</button>
                                             <button onClick={() => {handleClick("DONE", item._id)}} className="button">DONE</button>
@@ -106,13 +106,12 @@ export default function Trello() {
                     <div className="list">
                         {
                             tasks["DONE"] ?
-                            tasks["DONE"].map((status, idx) => {
-                                console.log(status)
+                            tasks["DONE"].map((item, idx) => {
                                 return (
                                     <div className="task" key={idx}>
-                                        <Link to={`/${status._id}`}>{status.summary}</Link>
+                                        <Link to={`/task/${item._id}`}>{item.summary}</Link>
                                         <div>
-                                            <button onClick={() => {handleClick("IN REVIEW", status._id)}} className="button">IN REVIEW</button>
+                                            <button onClick={() => {handleClick("IN REVIEW", item._id)}} className="button">IN REVIEW</button>
                                         </div>
                                     </div>
                                 )
@@ -123,6 +122,6 @@ export default function Trello() {
                     </div>
                 </div>
             </div>
-        </>
+        </main>
     );
 };

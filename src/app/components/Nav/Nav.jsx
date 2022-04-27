@@ -33,6 +33,7 @@ export default function Nav() {
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="/about">About</a></li>
                                     <li><a class="dropdown-item" href="https://github.com/dannguyen9219/thynkery-client">GitHub</a></li>
+                                    <li><a class="dropdown-item" href="/trello">Trello Board</a></li>
                                 </ul>
                             </li>
                         </ul>

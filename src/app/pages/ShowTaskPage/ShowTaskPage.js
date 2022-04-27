@@ -6,7 +6,7 @@ import ShowTask from "../../components/ShowTask/ShowTask";
 export default function ShowTaskPage() {
     return (
         <main className={styles.ShowTaskPage}>
-            <h1>This is the Show Task Page</h1>
+            <ShowTask />
         </main>
     );
 };
