@@ -29,7 +29,7 @@ export default function Task() {
     // console.log(tasks) // Function created with Teo when code did not map over Priority... delete later
     
     return (
-        <>
+        <main className="container">
             <div className="App">
                 <div>
                     <h1>This is the Task Page</h1> 
@@ -43,7 +43,7 @@ export default function Task() {
                                 console.log("Hello")
                                 return (
                                     <div className="task" key={idx}>
-                                        <h2>{item.type} <Link to={`/${item._id}`}>{item.summary}</Link> {item.status} {item.assignee} {item.dueDate} {item.priority}</h2>
+                                        <h2>{item.type} <Link to={`/task/${item._id}`}>{item.summary}</Link> {item.status} {item.assignee} {item.dueDate} {item.priority}</h2>
                                     </div>
                                 )
                             })
@@ -60,7 +60,7 @@ export default function Task() {
                             tasks["Medium"].map((item, idx) => {
                                 return (
                                     <div className="task" key={idx}>
-                                        <h2>{item.type} <Link to={`/${item._id}`}>{item.summary}</Link> {item.status} {item.assignee} {item.dueDate} {item.priority}</h2>
+                                        <h2>{item.type} <Link to={`/task/${item._id}`}>{item.summary}</Link> {item.status} {item.assignee} {item.dueDate} {item.priority}</h2>
                                     </div>
                                 )
                             })
@@ -77,7 +77,7 @@ export default function Task() {
                             tasks["Low"].map((item, idx) => {
                                 return (
                                     <div className="task" key={idx}>
-                                        <h2>{item.type} <Link to={`/${item._id}`}>{item.summary}</Link> {item.status} {item.assignee} {item.dueDate} {item.priority}</h2>
+                                        <h2>{item.type} <Link to={`/task/${item._id}`}>{item.summary}</Link> {item.status} {item.assignee} {item.dueDate} {item.priority}</h2>
                                     </div>
                                 )
                             })
@@ -87,6 +87,6 @@ export default function Task() {
                     </div>
                 </div>
             </div>
-        </>
+        </main>
     );
 };

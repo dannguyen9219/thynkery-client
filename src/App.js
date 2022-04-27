@@ -9,15 +9,20 @@ import TaskPage from "./app/pages/TaskPage/TaskPage";
 import TrelloPage from "./app/pages/TrelloPage/TrelloPage";
 import NewTaskPage from "./app/pages/NewTaskPage/NewTaskPage";
 import CalendarPage from './app/pages/CalendarPage/CalendarPage';
-import Header from "./app/components/Header/Header"
+import ShowTaskPage from './app/pages/ShowTaskPage/ShowTaskPage';
+import Nav from "./app/components/Nav/Nav";
 
 export default function App() {
     return (
-        <Routes>
-            <Route path="/" element={ <TaskPage /> }></Route>
-            <Route path="/trello" element={ <TrelloPage /> }></Route>
-            <Route path="/new" element={ <NewTaskPage /> }></Route>
-            <Route path="/calendar" element={ <CalendarPage /> }></Route>
-        </Routes>
+        <div className='App'>
+            <Nav />
+            <Routes>
+                <Route path="/" element={ <TaskPage /> }></Route>
+                <Route path="/trello" element={ <TrelloPage /> }></Route>
+                <Route path="/new" element={ <NewTaskPage /> }></Route>
+                <Route path="/calendar" element={ <CalendarPage /> }></Route>
+                <Route path="/task/:id" element={ <ShowTaskPage /> }></Route>
+            </Routes>
+        </div>
     );
 };

@@ -1,3 +1,27 @@
+.App {
+    background-color: white;
+}
+
+.list {
+    background-color: white;
+}
+
+.task {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section {
+    background-color: white;
+}
+
 h1 {
     border: 1px red solid;
 }
+
+h2 {
+    background-color: white;
+}
+
+
