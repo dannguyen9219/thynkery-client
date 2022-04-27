@@ -10,6 +10,7 @@ import TrelloPage from "./app/pages/TrelloPage/TrelloPage";
 import NewTaskPage from "./app/pages/NewTaskPage/NewTaskPage";
 import CalendarPage from './app/pages/CalendarPage/CalendarPage';
 import ShowTaskPage from './app/pages/ShowTaskPage/ShowTaskPage';
+import AboutPage from "./app/pages/AboutPage/AboutPage";
 import Nav from "./app/components/Nav/Nav";
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
                 <Route path="/new" element={ <NewTaskPage /> }></Route>
                 <Route path="/calendar" element={ <CalendarPage /> }></Route>
                 <Route path="/task/:id" element={ <ShowTaskPage /> }></Route>
+                <Route path="/about" element={ <AboutPage /> }></Route>
             </Routes>
         </div>
     );
