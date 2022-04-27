@@ -1,9 +1,0 @@
-header {
-    display: flex;
-    flex-direction: row;
-    border: 1px solid black;
-}
-
-nav ul li {
-    text-decoration: none;
-}
