@@ -1,4 +1,4 @@
-import styles from "./NewTask.css";
+import "./NewTask.css";
 import { useRef } from "react";
 import axios from "axios";
 
@@ -28,20 +28,22 @@ export default function NewTask() {
     };
     
     return (
-        <main className={styles.NewTask}>
+        <main id="newtaskmain">
             <form onSubmit={handleSubmit}>
                 <fieldset>
-                    <div className="newTask-main">
-                        <h1>This is the New Task Page</h1>
-                        <div className="newTask-container">
+                    <div className="card index-card border border-3">
+                        <div className="card-header">
+                            <h1>Add New Task</h1>
+                        </div>
+                        <div className="mb-3 card-body">
                             <ul>
                                 <li>
-                                    <label for="summary">Summary</label>
-                                    <input type="text" name="summary" id="type" placeholder="Summary" ref={summary}></input>
+                                    <label for="summary" className="form-label">Summary</label>
+                                    <input type="text" className="form-control"name="summary" id="type" placeholder="Summary" ref={summary}></input>
                                 </li>
                                 <li>
-                                    <label for="type">Type</label>
-                                    <select name="type" id="type" ref={type}>
+                                    <label for="type" className="form-label">Type</label>
+                                    <select className="form-select" name="type" id="type" ref={type}>
                                         <option selected>Choose...</option>
                                         <option value="Frontend">Frontend</option>
                                         <option value="Backend">Backend</option>
@@ -50,8 +52,8 @@ export default function NewTask() {
                                     </select>
                                 </li>
                                 <li>
-                                    <label for="status">Status</label>
-                                    <select name="status" id="status" ref={status}>
+                                    <label for="status" className="form-label">Status</label>
+                                    <select className="form-select" name="status" id="status" ref={status}>
                                         <option value="TO DO">TO DO</option>
                                         <option value="IN PROGRESS">IN PROGRESS</option>
                                         <option value="IN REVIEW">IN REVIEW</option>
@@ -59,8 +61,8 @@ export default function NewTask() {
                                     </select>
                                 </li>
                                 <li>
-                                    <label for="assignee">Assignee</label>
-                                    <select name="assignee" id="assignee" ref={assignee}>
+                                    <label for="assignee" className="form-label">Assignee</label>
+                                    <select className="form-select" name="assignee" id="assignee" ref={assignee}>
                                         <option selected>Choose...</option>
                                         <option value="Arthur Bernier Jr.">Arthur Bernier Jr. aka Master Splinter</option>
                                         <option value="Charlie Furman">Charlie Furman</option>
@@ -75,12 +77,12 @@ export default function NewTask() {
                                     </select>
                                 </li>
                                 <li>
-                                    <label for="dueDate">Due Date</label>
-                                    <input type="text" name="dueDate" placeholder="yyyy/mm/dd" ref={dueDate}></input>
+                                    <label for="dueDate" className="form-label">Due Date</label>
+                                    <input type="text" name="dueDate" id="inputdate"placeholder="yyyy/mm/dd" ref={dueDate}></input>
                                 </li>
                                 <li>
-                                    <label for="priority">Priority</label>
-                                    <select name="priority" id="priority" ref={priority}>
+                                    <label for="priority" className="form-label">Priority</label>
+                                    <select className="form-select" name="priority" id="priority" ref={priority}>
                                         <option selected>Choose...</option>
                                         <option value="Low">Low</option>
                                         <option value="Medium">Medium</option>
@@ -92,7 +94,7 @@ export default function NewTask() {
                     </div>
                 </fieldset>
                 <div id="button">
-                    <input type="submit" value="Create New Task"/>
+                    <input type="submit" className="btn btn-outline-primary" value="Create New Task"/>
                 </div>
             </form>
         </main>

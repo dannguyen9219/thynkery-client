@@ -18,6 +18,20 @@ export default function ShowTask(props) {
         }
     };
 
+    const deleteTask = async() => {
+        try {
+            await axios.delete(`http://localhost:3000/tasks/task/${id}`)
+            setTask("Delete successful")
+        }   catch (err) {
+            console.log(err)
+        }
+    };
+
+    // deleteTask() {
+    //     axios.delete(`http://localhost:3000/tasks/task/${id}`)
+    //         .then(() => this.setTask({ status: 'Delete successful' }));
+    // }
+
     useEffect(() => {
         getTask()
     }, []);
@@ -39,6 +53,10 @@ export default function ShowTask(props) {
                         <li>Priority: {task.priority}</li>
                     </ul>
                 </div>
+            </div>
+            <div>
+                {/* <form action={`/task/${id}_method=DELETE`}><input type="submit" value="Delete Task"/></form> */}
+                <button onClick={() => {deleteTask(task)}}>Delete Task</button>
             </div>
         </main>
     );

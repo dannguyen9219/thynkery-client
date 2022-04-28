@@ -1,0 +1,27 @@
+.card {
+    width: 80%;
+    justify-content: center;
+    margin: auto;
+}
+
+.fieldset {
+    align-items: center;
+}
+
+dl, ol, ul {
+    list-style-type: none;
+    text-decoration: none;
+    padding: 5px;
+}
+
+dl, ol, ul, li {
+    margin: 10px;
+}
+
+#inputdate {
+    margin-left: 25px;
+}
+
+div#button {
+    padding-left: 10%;
+}
