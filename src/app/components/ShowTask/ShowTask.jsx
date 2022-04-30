@@ -8,7 +8,6 @@ export default function ShowTask(props) {
     const [task, setTask] = useState([]);
     const { id } = useParams();
     const navigate = useNavigate();
-    console.log(id)
 
     useEffect(() => {
         (async () => {
@@ -22,12 +21,11 @@ export default function ShowTask(props) {
     }, []);
 
     const handleDelete = async(id) => {
-        navigate("/");
-        console.log(id);
         try {
-            await axios.delete(`http://localhost:3000/task/${id}`, {
+            await axios.delete(`http://localhost:3000/tasks/task/${id}`, {
                 method: "DELETE"
             })
+            navigate("/");
         }   catch (err) {
             console.log(err)
         }
