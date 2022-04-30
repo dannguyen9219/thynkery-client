@@ -1,4 +1,5 @@
 import "./NewTask.css";
+import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import axios from "axios";
 
@@ -9,6 +10,7 @@ export default function NewTask() {
     const assignee = useRef();
     const dueDate = useRef();
     const priority = useRef();
+    const navigate = useNavigate();
     
     const handleSubmit = async (evt) => {
         evt.preventDefault()
@@ -22,6 +24,7 @@ export default function NewTask() {
                 dueDate: dueDate.current.value,
                 priority: priority.current.value
             })
+            navigate("/");
         }   catch (err) {
             console.log(err)
         }

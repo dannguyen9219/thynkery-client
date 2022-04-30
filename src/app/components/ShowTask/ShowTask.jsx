@@ -1,4 +1,4 @@
-import styles from "./ShowTask.css";
+import "./ShowTask.css";
 import { useRef } from "react";
 import axios from "axios";
 import { useState, useEffect } from 'react';
@@ -32,7 +32,7 @@ export default function ShowTask(props) {
     };
     
     return (
-        <main className={styles.ShowTask}>
+        <main>
             <div>
                 <h1>This is the show task component</h1>
                 <h2>Superman</h2>
@@ -50,7 +50,7 @@ export default function ShowTask(props) {
                 </div>
             </div>
             <div>
-                <Link to="/edit/task/:id">Edit</Link>
+                <Link to={`/edit/task/${id}`} state={task}>Edit</Link>
                 <button onClick={() => handleDelete(task._id)}>Delete Task</button>
             </div>
         </main>

@@ -1,13 +1,12 @@
 import styles from "./Trello.css";
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-
-export default function Trello() {
+export default function Trello(props) {
     const [tasks, setTasks] = useState([]);
     const [buttonPressed, setButtonPressed] = useState(false);
-    const entry = useRef();
+
 
     useEffect(() => {
         (async () => {
