@@ -34,24 +34,22 @@ export default function ShowTask(props) {
     return (
         <main>
             <div>
-                <h1>This is the show task component</h1>
-                <h2>Superman</h2>
+                <h2 className="title-summary">{task.summary}</h2>
             </div>
             <div className="list">
-                <div className="task">
-                    <ul>
-                        <li>Type: {task.type}</li>
-                        <li>Summary: {task.summary}</li>
-                        <li>Status: {task.status}</li>
-                        <li>Assignee: {task.assignee}</li>
-                        <li>Due Date: {task.dueDate}</li>
-                        <li>Priority: {task.priority}</li>
+                <div className="card">
+                    <ul className="list-group list-group-flush">
+                        <li className="list-group-item" id="list-item">Type: {task.type}</li>
+                        <li className="list-group-item" id="list-item">Status: {task.status}</li>
+                        <li className="list-group-item" id="list-item">Assignee: {task.assignee}</li>
+                        <li className="list-group-item" id="list-item">Due Date: {task.dueDate}</li>
+                        <li className="list-group-item" id="list-item">Priority: {task.priority}</li>
                     </ul>
                 </div>
             </div>
-            <div>
-                <Link to={`/edit/task/${id}`} state={task}>Edit</Link>
-                <button onClick={() => handleDelete(task._id)}>Delete Task</button>
+            <div className="buttons">
+                <Link to={`/edit/task/${id}`} state={task} className="btn btn-outline-primary">Edit</Link>
+                <button onClick={() => handleDelete(task._id)} className="btn btn-danger">Delete Task</button>
             </div>
         </main>
     );

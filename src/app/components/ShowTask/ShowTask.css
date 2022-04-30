@@ -1,3 +1,15 @@
 ul {
     text-decoration: none;
 }
+
+.title-summary {
+    margin-left: 10%;
+}
+
+.buttons {
+    margin-left: 10%;
+}
+
+#list-item {
+    font-size: x-large;
+}

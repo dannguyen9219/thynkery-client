@@ -28,7 +28,7 @@ export default function EditTask(props) {
                 priority : priority
             }
             const response = await axios.put(`http://localhost:3000/tasks/edit/task/${location.state._id}`, updatedTask)
-            navigate("/")
+            navigate(`/task/${location.state._id}`)
         }   catch (err) {
             console.log(err)
         }
