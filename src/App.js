@@ -11,6 +11,7 @@ import NewTaskPage from "./app/pages/NewTaskPage/NewTaskPage";
 import CalendarPage from './app/pages/CalendarPage/CalendarPage';
 import ShowTaskPage from './app/pages/ShowTaskPage/ShowTaskPage';
 import AboutPage from "./app/pages/AboutPage/AboutPage";
+import EditPage from "./app/pages/EditPage/EditPage";
 import Nav from "./app/components/Nav/Nav";
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
                 <Route path="/calendar" element={ <CalendarPage /> }></Route>
                 <Route path="/task/:id" element={ <ShowTaskPage /> }></Route>
                 <Route path="/about" element={ <AboutPage /> }></Route>
+                <Route path="/edit/task/:id" element={ <EditPage /> }></Route>
             </Routes>
         </div>
     );

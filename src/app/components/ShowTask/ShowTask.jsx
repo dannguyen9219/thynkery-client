@@ -2,39 +2,36 @@ import styles from "./ShowTask.css";
 import { useRef } from "react";
 import axios from "axios";
 import { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 
 export default function ShowTask(props) {
     const [task, setTask] = useState([]);
     const { id } = useParams();
+    const navigate = useNavigate();
     console.log(id)
 
-    const getTask = async() => {
-        try {
-            const response = await axios.get(`http://localhost:3000/tasks/task/${id}`)
-            setTask(response.data)
-        }   catch (err) {
-            console.error(err)
-        }
-    };
+    useEffect(() => {
+        (async () => {
+            try {
+                const response = await axios.get(`http://localhost:3000/tasks/task/${id}`)
+                setTask(response.data)
+            }   catch (err) {
+                console.error(err)
+            }
+        })()
+    }, []);
 
-    const deleteTask = async() => {
+    const handleDelete = async(id) => {
+        navigate("/");
+        console.log(id);
         try {
-            await axios.delete(`http://localhost:3000/tasks/task/${id}`)
-            setTask("Delete successful")
+            await axios.delete(`http://localhost:3000/task/${id}`, {
+                method: "DELETE"
+            })
         }   catch (err) {
             console.log(err)
         }
     };
-
-    // deleteTask() {
-    //     axios.delete(`http://localhost:3000/tasks/task/${id}`)
-    //         .then(() => this.setTask({ status: 'Delete successful' }));
-    // }
-
-    useEffect(() => {
-        getTask()
-    }, []);
     
     return (
         <main className={styles.ShowTask}>
@@ -55,8 +52,8 @@ export default function ShowTask(props) {
                 </div>
             </div>
             <div>
-                {/* <form action={`/task/${id}_method=DELETE`}><input type="submit" value="Delete Task"/></form> */}
-                <button onClick={() => {deleteTask(task)}}>Delete Task</button>
+                <Link to="/edit/task/:id">Edit</Link>
+                <button onClick={() => handleDelete(task._id)}>Delete Task</button>
             </div>
         </main>
     );
