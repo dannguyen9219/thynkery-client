@@ -1,15 +1,13 @@
 import "./EditTask.css";
 import axios from "axios";
-import { useState, useRef } from 'react';
-import { useNavigate, useParams, useLocation } from "react-router-dom";
+import { useState } from 'react';
+import { useNavigate, useLocation } from "react-router-dom";
 
 
 export default function EditTask(props) {
     const location = useLocation();
     const navigate = useNavigate();
     const [task, setTask] = useState([]);
-    // const { id } = useParams();
-    console.log(location.state);
     const [summary, setSummary] = useState(location.state.summary);
     const [type, setType] = useState(location.state.type);
     const [status, setStatus] = useState(location.state.status);
@@ -38,7 +36,7 @@ export default function EditTask(props) {
 
     return (
         <main>
-            <form onClick={handleSubmit}>
+            <form>
                 <fieldset>
                     <div className="card index-card border border-3">
                         <div className="card-header">
@@ -103,30 +101,9 @@ export default function EditTask(props) {
                     </div>
                 </fieldset>
                 <div id="button">
-                    <button className="btn btn-outline-primary">Update Task</button>
-                    {/* <input type="submit" className="btn btn-outline-primary" value="Update Task"/> */}
+                    <button onClick={handleSubmit} className="btn btn-outline-primary">Update Task</button>
                 </div>
             </form>
         </main>
-
-        
-        // <main>
-        //     <div>
-        //         <h1>This is the edit task component</h1>
-        //         <h2>Batman</h2>
-        //     </div>
-        //     <div className="list">
-        //         <div className="task">
-        //             <ul>
-        //                 <li>Type: {task.type}</li>
-        //                 <li>Summary: {task.summary}</li>
-        //                 <li>Status: {task.status}</li>
-        //                 <li>Assignee: {task.assignee}</li>
-        //                 <li>Due Date: {task.dueDate}</li>
-        //                 <li>Priority: {task.priority}</li>
-        //             </ul>
-        //         </div>
-        //     </div>
-        // </main>
     );
 };
