@@ -39,7 +39,7 @@ export default function Nav() {
                                         <a className="dropdown-item" href="https://github.com/dannguyen9219/thynkery-client">GitHub</a>
                                     </li>
                                     <li>
-                                        <Link to="trello" className="dropdown-item">Trello Board</Link>
+                                        <Link to="trello" className="dropdown-item">The Board</Link>
                                     </li>
                                 </ul>
                             </li>
