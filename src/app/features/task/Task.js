@@ -1,5 +1,5 @@
 import "./Task.css";
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
@@ -17,33 +17,42 @@ export default function Task() {
         })()
 
     }, []);
-
-    // const getTask = async () => {
-    //     try {
-    //         const response = await axios.get(`http://localhost:3000/tasks/table`)
-    //         setTasks(response.data)
-    //     }   catch (err) {
-    //         console.log(err)
-    //     }
-    // };
-    // console.log(tasks) // Function created with Teo when code did not map over Priority... delete later
     
     return (
-        <main className="container">
-            <div className="App">
-                <div>
-                    <h1>This is the Task Page</h1> 
-                </div>
-                <div className="section" id="high-priority">
+        <main className="taskApp">
+            <div className="taskContainer">
+                <h1>Your Work</h1>
+                <div className="taskSection" id="high-priority">
                     <h2>High</h2>
-                    <div className="list">
+                    <div className="taskList">
                         {
                             tasks["High"] ?
                             tasks["High"].map((item, idx) => {
                                 console.log("Hello")
                                 return (
-                                    <div className="task" key={idx}>
-                                        <h2>{item.type} <Link to={`/task/${item._id}`}>{item.summary}</Link> {item.status} {item.assignee} {item.dueDate} {item.priority}</h2>
+                                    <div id="taskDescription"key={idx}>
+                                        <table className="table">
+                                            <thead>
+                                                <tr className="taskTable">
+                                                    <th scope="col">Type</th>
+                                                    <th scope="col">Summary</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Assignee</th>
+                                                    <th scope="col">Due Date</th>
+                                                    <th scope="col">Priority</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr className="taskTable">
+                                                    <th scope="row">{item.type}</th>
+                                                    <td><Link to={`/task/${item._id}`}>{item.summary}</Link></td>
+                                                    <td>{item.status}</td>
+                                                    <td>{item.assignee}</td>
+                                                    <td>{item.dueDate}</td>
+                                                    <td>{item.priority}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 )
                             })
@@ -52,15 +61,36 @@ export default function Task() {
                         }
                     </div>
                 </div>
-                <div className="section" id="medium-priority">
+                <div className="taskSection" id="medium-priority">
                     <h2>Medium</h2>
-                    <div className="list">
+                    <div className="taskList">
                         {
                             tasks["Medium"] ?
                             tasks["Medium"].map((item, idx) => {
                                 return (
-                                    <div className="task" key={idx}>
-                                        <h2>{item.type} <Link to={`/task/${item._id}`}>{item.summary}</Link> {item.status} {item.assignee} {item.dueDate} {item.priority}</h2>
+                                    <div id="taskDescription"key={idx}>
+                                        <table className="table">
+                                            <thead>
+                                                <tr className="taskTable">
+                                                    <th scope="col">Type</th>
+                                                    <th scope="col">Summary</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Assignee</th>
+                                                    <th scope="col">Due Date</th>
+                                                    <th scope="col">Priority</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr className="taskTable">
+                                                    <th scope="row">{item.type}</th>
+                                                    <td><Link to={`/task/${item._id}`}>{item.summary}</Link></td>
+                                                    <td>{item.status}</td>
+                                                    <td>{item.assignee}</td>
+                                                    <td>{item.dueDate}</td>
+                                                    <td>{item.priority}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 )
                             })
@@ -69,15 +99,36 @@ export default function Task() {
                         }
                     </div>
                 </div>
-                <div className="section" id="low-priority">
+                <div className="taskSection" id="low-priority">
                     <h2>Low</h2>
-                    <div className="list">
+                    <div className="taskList">
                         {
                             tasks["Low"] ?
                             tasks["Low"].map((item, idx) => {
                                 return (
-                                    <div className="task" key={idx}>
-                                        <h2>{item.type} <Link to={`/task/${item._id}`}>{item.summary}</Link> {item.status} {item.assignee} {item.dueDate} {item.priority}</h2>
+                                    <div id="taskDescription"key={idx}>
+                                        <table className="table">
+                                            <thead>
+                                                <tr className="taskTable">
+                                                    <th scope="col">Type</th>
+                                                    <th scope="col">Summary</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Assignee</th>
+                                                    <th scope="col">Due Date</th>
+                                                    <th scope="col">Priority</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr className="taskTable">
+                                                    <th scope="row">{item.type}</th>
+                                                    <td><Link to={`/task/${item._id}`}>{item.summary}</Link></td>
+                                                    <td>{item.status}</td>
+                                                    <td>{item.assignee}</td>
+                                                    <td>{item.dueDate}</td>
+                                                    <td>{item.priority}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 )
                             })

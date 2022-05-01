@@ -1,20 +1,51 @@
-.App {
+.taskApp {
     background-color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+}
+/* 
+.taskContainer {
+    background-color: aquamarine;
+} */
+
+.taskSection {
+    padding: 1%;
+    width: 80vw;
 }
 
-.list {
-    background-color: white;
+.taskTable {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content:space-between;
 }
 
-.task {
+/* .taskList {
+    border: 1px solid black;
+    width: 90vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#taskDescription {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
+
+.taskItems {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+/* .task {
     background-color: white;
     display: flex;
     justify-content: space-between;
-}
-
-.section {
-    background-color: white;
-}
+} */
 
 /* h1 {
     border: 1px red solid;
