@@ -72,6 +72,7 @@ export default function NewTask() {
                                         <option value="Dan Nguyen">Dan Nguyen aka Danimal</option>
                                         <option value="Farah Yeaznee">Farah Yeaznee</option>
                                         <option value="Gerimae Oliva">Gerimae Oliva</option>
+                                        <option value="Joshua Miller">Joshua Miller</option>
                                         <option value="Julio Colon">Julio Colon</option>
                                         <option value="Lucas Carlos">Lucas Carlos</option>
                                         <option value="Michael Del Castillo">Michael Del Castillo</option>
@@ -81,7 +82,7 @@ export default function NewTask() {
                                 </li>
                                 <li>
                                     <label for="dueDate" className="form-label">Due Date</label>
-                                    <input type="text" name="dueDate" id="inputdate"placeholder="yyyy/mm/dd" ref={dueDate}></input>
+                                    <input type="text" name="dueDate" id="inputdate"placeholder="YYYY/MM/DD" ref={dueDate}></input>
                                 </li>
                                 <li>
                                     <label for="priority" className="form-label">Priority</label>

@@ -2,3 +2,14 @@ img#logo {
     height: 50px;
     width: 50px;
 }
+
+nav {
+    background-color: #caf0f8ab;
+    border-radius: 5px;
+}
+
+.nav-item {
+    color: black;
+    font-size: large;
+    font-weight: 500;
+}
