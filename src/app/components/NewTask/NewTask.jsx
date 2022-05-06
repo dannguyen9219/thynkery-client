@@ -16,7 +16,7 @@ export default function NewTask() {
         evt.preventDefault()
         try {
             console.log("Click on handle submit")
-            const response = await axios.post(`http://localhost:3000/tasks`, {
+            const response = await axios.post(`https://thynkery.herokuapp.com/tasks`, {
                 summary: summary.current.value,
                 type: type.current.value,
                 status: status.current.value,
