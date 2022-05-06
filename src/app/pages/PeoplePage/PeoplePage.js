@@ -7,5 +7,5 @@ export default function PeoplePage() {
         <main>
             <People />
         </main>
-    )
-}
+    );
+};

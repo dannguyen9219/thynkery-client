@@ -1,0 +1,22 @@
+/* .peopleList {
+    display: flex;
+} */
+
+.peopleContainer {
+    margin-left: 5%;
+}
+
+.profileImage {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid;
+}
+
+.employeeName {
+    font-size: x-large;
+}
+
+.meet {
+    margin-left: 5%;
+}

@@ -1,9 +1,18 @@
 import React from "react";
+import { useState } from 'react';
 import styles from "./Nav.css";
 import logo from "../../../images/thynkery-logo-3.png"
 import { Link } from "react-router-dom";
+import UserLogOut from "../UserLogOut/UserLogOut";
+import { logOut } from "../../utilities/users-service";
 
-export default function Nav() {
+export default function Nav({user, setUser}) {
+    const handleLogOut = () => {
+        logOut()
+        setUser(null)
+        console.log("Clicked Log Out")
+    };
+    
     return (
         <main className={styles.Nav}>
             <nav className="navbar navbar-expand-lg">
@@ -21,7 +30,7 @@ export default function Nav() {
                                 <Link to="/" className="nav-link">Your Work</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/" className="nav-link">Your Projects</Link>
+                                <Link to="trello" className="nav-link">The Board</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/people" className="nav-link">People</Link>
@@ -38,9 +47,8 @@ export default function Nav() {
                                     <li>
                                         <a className="dropdown-item" href="https://github.com/dannguyen9219/thynkery-client">GitHub</a>
                                     </li>
-                                    <li>
-                                        <Link to="trello" className="dropdown-item">The Board</Link>
-                                    </li>
+                                    {/* <button className="logout-btn" onClick={handleLogOut}>Log Out</button> */}
+                                    <UserLogOut user={user} setUser={setUser} />
                                 </ul>
                             </li>
                         </ul>

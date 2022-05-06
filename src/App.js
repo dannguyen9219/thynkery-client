@@ -15,6 +15,7 @@ import EditPage from "./app/pages/EditPage/EditPage";
 import PeoplePage from "./app/pages/PeoplePage/PeoplePage";
 import Nav from "./app/components/Nav/Nav";
 import Task from './app/features/task/Task';
+import UserLogOut from "./app/components/UserLogOut/UserLogOut";
 
 export default function App() {
     const [user, setUser] = useState(getUser());
@@ -37,7 +38,8 @@ export default function App() {
 
     return (
         <main>
-            <Nav />
+            <Nav user={user} setUser={setUser} />
+            {/* <UserLogOut /> */}
             {
                 user ?
                 <Routes>
@@ -48,8 +50,10 @@ export default function App() {
                     <Route path="/task/:id" element={ <ShowTaskPage /> }></Route>
                     <Route path="/about" element={ <AboutPage /> }></Route>
                     <Route path="/edit/task/:id" element={ <EditPage /> }></Route>
+                    <Route path="/people" element={ <PeoplePage /> }></Route>
                 </Routes>
                 :
+                // <Route path="/" element={ <AuthPage setUser={setUser} /> }></Route>
                 <AuthPage setUser={setUser} />
             }
         </main>
