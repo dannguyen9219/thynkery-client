@@ -1,5 +1,6 @@
 import { logOut } from "../../utilities/users-service";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import "./UserLogOut.css";
 
 export default function UserLogOut({ user, setUser }) {
     const navigate = useNavigate();
@@ -16,7 +17,7 @@ export default function UserLogOut({ user, setUser }) {
 
     return (
         <div className="user-logout">
-            <button onClick={handleLogOut}>Log Out</button>
+            <button className="btn btn-light" onClick={handleLogOut}>Log Out</button>
         </div>
     );
 };

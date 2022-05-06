@@ -47,7 +47,6 @@ export default function Nav({user, setUser}) {
                                     <li>
                                         <a className="dropdown-item" href="https://github.com/dannguyen9219/thynkery-client">GitHub</a>
                                     </li>
-                                    {/* <button className="logout-btn" onClick={handleLogOut}>Log Out</button> */}
                                     <UserLogOut user={user} setUser={setUser} />
                                 </ul>
                             </li>

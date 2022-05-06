@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# **Thynkery**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Thynkery is a project management app created by Dan Nguyen. You are able to track your tasks for any project you have.
 
-## Available Scripts
+Thynkery is an easy-to-use web application that uses full CRUD and follows MVC. Use it to add new tasks, edit tasks, and track your progress for any project.
 
-In the project directory, you can run:
+## **Background**
 
-### `npm start`
+This application was built for General Assembly's Software Engineering Immersive Course - Project 3. It is a full MERN stack application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## **Technologies Used**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+HTML | CSS | JavaScript | MongoDB | Express | React | Node.js | BootStrap | JWT | Heroku | Netlify | Git | GitHub
 
-### `npm test`
+## **Getting Started**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Click here to launch the app:
 
-### `npm run build`
+In Thynkery, you can create, read, update, and delete any of your tasks for your project. If you are a new user, you must sign up first and then login. Once logged in, use the "Create" button on the navigation bar to add your first task! Once created, you can click on your task to see a summary of it. You can also edit and delete your task. "The Board" feature is used to see all your tasks on a Trello Board. Use it to move tasks from "To Do" all the way to "Done"! New features will be rolling out shortly.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# **Screenshots, Wireframe, Trello, and ERD**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Landing Page**
+![front page](/public/thynkery-login.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Tasks Page**
+![task page](/public/thynkery-index.png)
 
-### `npm run eject`
+**Create Task**
+![create page](/public/thynkery-create.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**The Board**
+![the board](/public/thynkery-board.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Wireframe**
+![wireframe](/public/thynkery-wireframe.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**ERD**
+![erd](/public/thynkery-ERD.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## **Future Additions**
 
-## Learn More
+More features will become readily available including, but not limited to...
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Calendar page
+- Filter tasks by type, status, assignee, priority and date by using the search feature
+- Timeline page
+- Attach files
