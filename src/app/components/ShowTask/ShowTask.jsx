@@ -11,7 +11,7 @@ export default function ShowTask(props) {
     useEffect(() => {
         (async () => {
             try {
-                const response = await axios.get(`https://thynkery.herokuapp.com/tasks/task/${id}`)
+                const response = await axios.get(`http://localhost:3000/tasks/task/${id}`)
                 setTask(response.data)
             }   catch (err) {
                 console.error(err)
@@ -21,7 +21,7 @@ export default function ShowTask(props) {
 
     const handleDelete = async(id) => {
         try {
-            await axios.delete(`https://thynkery.herokuapp.com/tasks/task/${id}`, {
+            await axios.delete(`http://localhost:3000/tasks/task/${id}`, {
                 method: "DELETE"
             })
             navigate("/");

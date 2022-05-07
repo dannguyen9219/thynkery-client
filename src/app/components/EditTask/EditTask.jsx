@@ -27,7 +27,7 @@ export default function EditTask(props) {
                 dueDate : dueDate,
                 priority : priority
             }
-            const response = await axios.put(`https://thynkery.herokuapp.com/tasks/edit/task/${location.state._id}`, updatedTask)
+            const response = await axios.put(`http://localhost:3000/tasks/edit/task/${location.state._id}`, updatedTask)
             navigate(`/task/${location.state._id}`)
         }   catch (err) {
             console.log(err)

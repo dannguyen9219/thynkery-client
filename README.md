@@ -12,6 +12,10 @@ This application was built for General Assembly's Software Engineering Immersive
 
 HTML | CSS | JavaScript | MongoDB | Express | React | Node.js | BootStrap | JWT | Heroku | Netlify | Git | GitHub
 
+## **Backend Code**
+
+Link to the code for the Backend: https://github.com/dannguyen9219/thynkery-backend
+
 ## **Getting Started**
 
 Click here to launch the app: https://thynkery.netlify.app/
