@@ -14,7 +14,7 @@ HTML | CSS | JavaScript | MongoDB | Express | React | Node.js | BootStrap | JWT 
 
 ## **Getting Started**
 
-Click here to launch the app:
+Click here to launch the app: https://thynkery.netlify.app/
 
 In Thynkery, you can create, read, update, and delete any of your tasks for your project. If you are a new user, you must sign up first and then login. Once logged in, use the "Create" button on the navigation bar to add your first task! Once created, you can click on your task to see a summary of it. You can also edit and delete your task. "The Board" feature is used to see all your tasks on a Trello Board. Use it to move tasks from "To Do" all the way to "Done"! New features will be rolling out shortly.
 
