@@ -11,7 +11,7 @@ export default function Trello(props) {
     useEffect(() => {
         (async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/tasks/trello`)
+                const response = await axios.get(`https://thynkery.herokuapp.com/tasks/trello`)
                 setTasks(response.data)
             }   catch (err) {
                 console.log(err)
@@ -21,7 +21,7 @@ export default function Trello(props) {
 
     const handleClick = async (statusChange, id) => {
         try {
-            const response = await axios.put(`http://localhost:3000/tasks/${id}`, {
+            const response = await axios.put(`https://thynkery.herokuapp.com/tasks/${id}`, {
                 status: statusChange
             })
             if (response.status === 200) {

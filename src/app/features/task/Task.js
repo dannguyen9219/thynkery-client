@@ -9,7 +9,7 @@ export default function Task() {
     useEffect(() => {
         (async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/tasks/table`)
+                const response = await axios.get(`https://thynkery.herokuapp.com/tasks/table`)
                 setTasks(response.data)
             }   catch (err) {
                 console.log(err)
